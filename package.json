@@ -1,0 +1,30 @@
+{
+  "name": "projectauth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev":"nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaramMs/ProjectAuth.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaramMs/ProjectAuth/issues"
+  },
+  "homepage": "https://github.com/MaramMs/ProjectAuth#readme",
+  "dependencies": {
+    "compresion": "^1.7.11",
+    "env2": "^2.2.2",
+    "express": "^4.17.3",
+    "pg": "^8.7.3"
+  },
+  "devDependencies":{
+    "nodemon": "^2.0.15"
+  }
+}
