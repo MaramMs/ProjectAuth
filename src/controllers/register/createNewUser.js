@@ -24,11 +24,9 @@ const createNewUser = (req, res, next) => {
     .then(({ rows }) => signToken({ userId: rows.id }))
     .then((token) => {
       res
-        .cookie("token", token,{
-          
-              httpOnly: true,
-              secure: true,
-            
+        .cookie("token", token, {
+          httpOnly: true,
+          secure: true,
         })
         .redirect("/");
     })

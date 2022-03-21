@@ -1,7 +1,7 @@
 const express = require("express");
 const api  = require("./api");
 const views = require('./view')
-const {createNewUser} =require('../controllers')
+// const {createNewUser,logUser} =require('../controllers')
 const router = express()
 
 
