@@ -3,6 +3,8 @@ require("env2")(".env")
 const {join} = require("path");
 const express = require("express");
 const compression = require("compression");
+
+
 const router = require('./router')
 const app = express();
 app.use(express.json());
