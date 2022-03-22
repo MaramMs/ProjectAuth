@@ -1,10 +1,10 @@
 
-
 const login = document.querySelector('#login')
 const email = document.querySelector('#email')
 const password = document.querySelector('#password')
 
-login.addEventListener('click',()=>{
+login.addEventListener('click',(e)=>{
+  e.preventDefault()
   fetch('/api/v1/login',{
   method:'POST',
   headers:{

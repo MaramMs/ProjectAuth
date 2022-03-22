@@ -8,6 +8,7 @@ const {
 
 const createNewUser = (req, res, next) => {
   const { user_name, email, password } = req.body;
+  console.log(req.body);
   registerSchema
     .validateAsync(req.body)
     .then(() => getUserByEmailQuery(email))
@@ -27,8 +28,8 @@ const createNewUser = (req, res, next) => {
         .cookie("token", token, {
           httpOnly: true,
           secure: true,
-        })
-        .redirect("/");
+        }).json('register')
+      
     })
 
     .catch((err) => {

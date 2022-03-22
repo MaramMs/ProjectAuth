@@ -10,8 +10,8 @@ const logUser = (req, res, next) => {
     .validateAsync(req.body)
     .then(({ email }) => logUserQuery(email))
     .then((data) => {
-      userId = data.rows[0].id;
       if (data.rowCount) {
+        userId = data.rows[0].id;
         return compare(password, data.rows[0].password);
       }
     })
@@ -24,7 +24,7 @@ const logUser = (req, res, next) => {
           400
         );
       }
-    })
+    }).then(res=>console.log(res))
     .then((token) => {
       res
         .cookie("token", token, {
