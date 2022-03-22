@@ -12,16 +12,15 @@ signUp.addEventListener("click",(e)=>{
       'Content-Type':'application/json',
     },
     body:JSON.stringify({
-      username:user_name.value,
+      user_name:user_name.value,
       email:email.value,
       password:password.value,
     })
-    .then(res=>res.JSON())
-    .then(data=>{
-      console.log(data);
-    })
-    .catch(err=>{
-      console.log(err);
-    })
+  }).then(res => res.json())
+  .then(data=>{
+    console.log(data);
+  })
+  .catch(err=>{
+    console.log(err);
   })
 })
