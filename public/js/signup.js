@@ -15,6 +15,13 @@ signUp.addEventListener("click",(e)=>{
       username:user_name.value,
       email:email.value,
       password:password.value,
-    }),
-  }).JSON()
+    })
+    .then(res=>res.JSON())
+    .then(data=>{
+      console.log(data);
+    })
+    .catch(err=>{
+      console.log(err);
+    })
+  })
 })
