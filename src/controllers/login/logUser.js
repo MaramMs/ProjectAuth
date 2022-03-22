@@ -24,13 +24,10 @@ const logUser = (req, res, next) => {
           400
         );
       }
-    }).then(res=>console.log(res))
+    })
     .then((token) => {
       res
-        .cookie("token", token, {
-          httpOnly: true,
-          secure: true,
-        })
+        .cookie("token", token)
         .json("login");
     })
     .catch((err) => {
