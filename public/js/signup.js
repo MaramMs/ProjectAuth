@@ -4,7 +4,8 @@ const email=document.querySelector('#email')
 const password=document.querySelector('#password')
 const signUp = document.querySelector("#signUp");
 
-signUp.addEventListener("click",()=>{
+signUp.addEventListener("click",(e)=>{
+  e.preventDefault()
   fetch('/api/v1/register',{
     method:'POST',
     headers:{
@@ -15,13 +16,5 @@ signUp.addEventListener("click",()=>{
       email:email.value,
       password:password.value,
     }),
-  })
-  // .then(res=>res.redirect('/'))
-  // .then(data=>{
-  //   console.log(data);
-  // })
-  // .catch(err=>{
-  //   console.log(err);
-  // })
+  }).JSON()
 })
-console.log('helllllllllllllllllllllo');
